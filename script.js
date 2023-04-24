@@ -7,7 +7,6 @@ const btnRainbow = document.querySelector(".btn-rainbow");
 
 let drag = false;
 let color = "#000000";
-let userColor = "#000000";
 let size = 16;
 let rainbowToggled = false;
 
@@ -19,7 +18,7 @@ sketchpad.style.height = "640px";
 
 document.addEventListener("pointerdown", () => (drag = true));
 document.addEventListener("pointerup", () => (drag = false));
-colorPicker.addEventListener("input", (e) => (userColor = e.target.value));
+colorPicker.addEventListener("input", (e) => (color = e.target.value));
 sizeSlider.addEventListener("input", (e) => {
   size = e.target.value;
   generateGrid(size);
@@ -32,8 +31,7 @@ function generateRandomColor() {
 }
 
 function paint(block) {
-  color = rainbowToggled ? generateRandomColor() : userColor;
-  block.style.backgroundColor = color;
+  block.style.backgroundColor = rainbowToggled ? generateRandomColor() : color;
 }
 
 function generateGrid(size) {
@@ -52,7 +50,6 @@ function generateGrid(size) {
     sketchpad.appendChild(block);
   }
 }
-
 
 generateGrid(size);
 
