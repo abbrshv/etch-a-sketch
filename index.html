@@ -5,14 +5,26 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <script defer type="text/javascript" src="script.js"></script>
     <title>Etch-a-Sketch</title>
+    <script defer src="script.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="header">
     <h1 class="header__title">Etch-a-Sketch</h1>
 </div>
 <div class="container">
+    <div class="color-picker">
+        <input id="color" name="color" type="color"
+               value="#e000000">
+        <label for="color">Color</label>
+    </div>
+    <div class="size-slider">
+        <input id="size" max="64" min="2"
+               name="size" type="range" value="16">
+        <label for="size" class="size-value">Size: 16x16</label>
+    </div>
+    <button class="btn-rainbow" type="button">Rainbow Mode</button>
+    <button class="btn-reset" type="button">Reset</button>
     <div class="sketchpad">
 
     </div>
