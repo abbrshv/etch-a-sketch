@@ -10,12 +10,6 @@ let color = "#000000";
 let size = 16;
 let rainbowToggled = false;
 
-// MOVE TO CSS
-sketchpad.style.display = "grid";
-sketchpad.style.width = "640px";
-sketchpad.style.height = "640px";
-//
-
 document.addEventListener("pointerdown", () => (drag = true));
 document.addEventListener("pointerup", () => (drag = false));
 colorPicker.addEventListener("input", (e) => (color = e.target.value));
@@ -52,4 +46,3 @@ function generateGrid(size) {
 }
 
 generateGrid(size);
-
