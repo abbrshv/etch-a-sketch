@@ -14,18 +14,21 @@
     <h1 class="header__title">Etch-a-Sketch</h1>
 </div>
 <div class="container">
-    <div class="color-picker">
-        <input id="color" name="color" type="color"
-               value="#e000000">
-        <label for="color">Color</label>
-    </div>
-    <button class="btn btn-eraser" type="button">Eraser</button>
-    <button class="btn btn-rainbow" type="button">Rainbow Mode</button>
-    <button class="btn btn-reset" type="button">Reset</button>
-    <div class="size-slider">
-        <input id="size" max="64" min="2"
-               name="size" type="range" value="16">
-        <label class="size-value" for="size">Size: 16x16</label>
+    <div class="menu-container">
+        <div class="color-picker">
+            <input id="color" name="color" type="color"
+                   value="#e000000">
+            <label for="color"></label>
+        </div>
+        <button class="btn btn-eraser" type="button">Eraser</button>
+        <button class="btn btn-reset" type="button">Reset</button>
+        <button class="btn btn-rainbow" type="button">Rainbow Mode</button>
+        <p class="size-value">16x16</p>
+        <div class="size-slider">
+            <input id="size" max="64" min="2"
+                   name="size" type="range" value="16">
+            <label for="size"></label>
+        </div>
     </div>
     <div class="sketchpad">
 
