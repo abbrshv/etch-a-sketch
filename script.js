@@ -3,11 +3,13 @@ const colorPicker = document.querySelector(".color-picker");
 const sizeSlider = document.querySelector(".size-slider");
 const sizeValue = document.querySelector(".size-value");
 const btnReset = document.querySelector(".btn-reset");
+const btnEraser = document.querySelector(".btn-eraser");
 const btnRainbow = document.querySelector(".btn-rainbow");
 
 let drag = false;
 let color = "#000000";
 let size = 16;
+let eraserToggled = false;
 let rainbowToggled = false;
 
 document.addEventListener("pointerdown", () => (drag = true));
@@ -17,6 +19,7 @@ sizeSlider.addEventListener("input", (e) => {
   size = e.target.value;
   generateGrid(size);
 });
+btnEraser.addEventListener("click", () => (eraserToggled = !eraserToggled));
 btnRainbow.addEventListener("click", () => (rainbowToggled = !rainbowToggled));
 btnReset.addEventListener("click", () => generateGrid(size));
 
@@ -25,7 +28,11 @@ function generateRandomColor() {
 }
 
 function paint(block) {
-  block.style.backgroundColor = rainbowToggled ? generateRandomColor() : color;
+  block.style.backgroundColor = rainbowToggled
+    ? generateRandomColor()
+    : eraserToggled
+    ? "#ffffff"
+    : color;
 }
 
 function generateGrid(size) {
