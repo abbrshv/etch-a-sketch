@@ -62,7 +62,7 @@ input[type='color']::-webkit-color-swatch-wrapper {
 
 input[type='color']::-webkit-color-swatch {
     border: none;
-    border-radius: 20%;
+    border-radius: 25%;
     box-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
 }
 
