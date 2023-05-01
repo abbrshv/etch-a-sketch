@@ -44,10 +44,10 @@ function generateRandomColor() {
 }
 
 function paint(block) {
-  block.style.backgroundColor = btnRainbow.classList.contains("active")
-    ? generateRandomColor()
-    : btnEraser.classList.contains("active")
+  block.style.backgroundColor = btnEraser.classList.contains("active")
     ? "white"
+    : btnRainbow.classList.contains("active")
+    ? generateRandomColor()
     : color;
 }
 
